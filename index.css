@@ -1,0 +1,481 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+html{
+    width:100%;
+    height:100%;  
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    width:1440px;
+    height:1024px;
+    display:flex; 
+    justify-content: center;
+    align-content: center;
+    background-color: hsl(228, 33%, 97%);
+}
+#dimmed-overlay{
+  display:none;
+  height: 100%;
+  width:100%;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0, 0.7);
+  overflow-x: hidden; 
+  
+}
+
+#myModal{
+    display: none;
+    width: 390px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    top:370px;
+    left:520px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-direction:column;
+    row-gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#deletemodal {
+display: none;
+width: 395px;
+height: 252px;
+background-color: white;
+position: absolute;
+top:370px;
+left:520px;
+border-radius: 7px;
+padding:20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+z-index: 20;
+   
+}
+#deletemodal .modaltext h4{
+    margin-top: 10px;
+    font-size:25px;
+    font-weight: 800;
+}
+#deletemodal .modaltext p{
+    font-size: 17px;
+    font-weight: 400;
+} 
+
+.modalbuttons{
+    margin-top: 50px;
+    width:390px;
+    height:48px;
+    display:flex;
+    flex-direction:row;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+   
+}
+#modalcancel {
+    width:170px;
+    height:100%;
+    background-color: #777;
+    color: #fff;
+    border: none;   
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0px;
+}
+#modaldelete {
+    width:170px;
+    height:48px;
+    background-color: #ff0000; 
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0px;
+
+}
+
+parent{
+    width:51%;
+    height:87.5%;
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    row-gap:25px;  
+    background-color: hsl(228, 33%, 97%);
+}
+
+.postwrappercomment{
+    width:100%;
+    height:18%;
+    padding-top: 23px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    column-gap: 25px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.postwrapperreply{
+    width:87%;
+    height:18%;
+    margin-left: 97px;
+    padding-top: 23px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    column-gap: 25px;
+    border-radius: 10px;
+   background-color: white;
+
+}
+.at{
+    color:hsl(238, 58%, 44%);
+    font-weight:bold;
+}
+.postwrapper{
+    width:94%;
+    height:18%;
+    padding: 23px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    column-gap: 30px;
+    border-radius: 10px;
+     background-color: white;
+    
+}
+.postwrapper button{
+    width:95px;
+    height:40px;
+    background-color:hsl(238, 58%, 44%);
+    color:white;
+    border-radius: 7px;
+    border:0px;
+    font-size: 14px;
+}
+.postwrapper img{
+    width:51px;
+    height:51px;
+}
+.postwrapper textarea{
+    border: 2px solid hsl(223, 19%, 93%);
+    border-radius: 7px;
+    width:62%;
+    height:90px;
+    padding: 10px;
+    color:gray;
+}
+.verticalcounter{  
+    width:40px;
+    height:100px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    background-color:hsl(228, 33%, 97%);
+}
+.verticalcounter h{
+    color:hsl(238, 58%, 44%);
+    font-weight: 500;
+}
+.commentbox{
+    width:82%;
+    height:90%;
+    display:flex;
+    color: hsl(211, 10%, 45%);
+    flex-direction:column;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.notetop{
+    height:30%;
+    display:flex;
+    flex-direction:row;
+    align-items: center;  
+    justify-content: space-between;
+    
+}
+.imgnametime{
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    column-gap: 10px;
+}
+.timeelapsed{margin-left: 10px;}
+.uname{
+    font-weight:700;
+    color:black;}
+#me{
+    width:33px;
+    height:19px;
+    font-size: 13px;
+    color:white;
+    background-color: hsl(238, 58%, 44%);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+    
+
+}
+.actions{
+    padding:2px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.replyicon{
+    color: hsl(238, 58%, 44%);
+    font-weight:500;
+}    
+.delete{
+    color: red;
+    font-weight:500;
+}
+.editicon{
+    
+    color: hsl(238, 58%, 44%);
+    font-weight:500;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 375px) {
+    
+    body{
+        width:375px;
+        height:1024px;
+        margin:0px;
+    }
+    parent{
+        width:289px;
+        height:100%;
+        row-gap: 10px;
+        margin-top: 10px;
+        margin-bottom:10px;
+        padding:0px;
+    }
+
+    .postwrappercomment{
+        
+        width:269px;
+        height:22%;
+        padding-top: 0px;
+        margin-top: 0px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:unset;
+        row-gap:0px ;
+        column-gap:unset;
+        margin-left: 0; 
+   
+    }
+    .postwrappercomment .verticalcounter{
+        margin:0px;
+        padding:0px;
+        position:relative;
+        top:144px;
+        left:-82px;
+        width:80px;
+        height:30px;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        column-gap: 2px;
+        border-radius: 8px;
+    }
+    .postwrappercomment .actions{
+       position:relative;
+       display:flex;
+       flex-direction: row;
+       column-gap: 5px;
+       top: 130px;
+       right:18px;
+    }
+    
+    
+    .postwrapperreply{
+        width:89%;
+        height:22%;
+        margin-left: 12px;
+        padding-top: 0px;
+        margin-top: 0px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        row-gap:0px ;
+        column-gap:unset;
+    }
+    
+    .postwrapperreply .verticalcounter{
+        margin:0px;
+        padding:0px;
+        position:relative;
+        top:31px;
+        left:-82px;
+        width:80px;
+        height:30px;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        column-gap: 2px;
+        border-radius: 8px;
+    }
+    .postwrapperreply .actions{
+       position:relative;
+       display:flex;
+       flex-direction: row;
+       column-gap: 5px;
+       top: 130px;
+       right:18px;
+    }
+    .avatar {
+        width:30px;
+        height:30px;
+    }
+    
+   
+    
+    .verticalcounter h{
+        font-weight: 700;
+        font-size: 13px;
+    
+    }
+    
+    .notetop{
+        height:unset;
+        justify-content:unset;
+    }
+    
+    .postwrappercomment .commentbox{
+        width:90%;
+        height:unset;
+        font-size: 13px;
+        margin-top:-16px;
+    }
+
+    .postwrapperreply .commentbox{
+        width:90%;
+        height:unset;
+        font-size: 13px;
+        margin-top:-127px;
+    }
+       
+    .postwrappercomment .commentbox p{
+        width:249px;
+        height:15px;
+        padding:0px;
+        margin: 0px;
+        
+    } 
+    .postwrapperreply .commentbox p {
+        width:231px;
+        height:15px;
+        padding:0px;
+        margin:0px;
+    }
+    .imgnametime{
+        white-space: nowrap;
+        width:85%;
+        height:unset;
+        align-items: center; 
+    }
+    .imgnametime p{
+        padding: 0px;
+        margin:0px;
+    }
+    #deleteedit{
+     right:70px;
+    }
+
+    /*/////////the input wrapper//////////////*/
+    
+    .postwrapper{
+        padding:0px;
+        margin-left:0px;
+        width:273px;
+        height:18%;
+        display:flex;
+        flex-direction:unset;
+        justify-content: unset;
+        column-gap: unset;
+    }
+    .postwrapper button{
+       width:90px;
+       height:35px;
+       position: relative;
+       top: 126px;
+       left:-21px;
+    }
+    .postwrapper img{
+        width:35px;
+        height:35px;
+        position:relative;
+        top: 118px;
+        left: 17px;
+    }
+    
+    .postwrapper textarea{  
+        position:relative;
+        bottom:-15px;
+        left:5px;
+        width:253px;
+        height:80px;
+        padding: 0px;
+        color:gray;
+    }
+  /*///////////////delete modal////////////////*/  
+  
+#deletemodal {
+    display: none;
+    width: 290px;
+    height: 190px;
+    background-color: white;
+    position: absolute;
+    top:270px;
+    left:5px;
+    border-radius: 7px;
+    padding:20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 20;
+       
+    }
+    
+    .modalbuttons{
+        margin-top: 28px;
+        width:100%;
+        height:40px;
+        column-gap: 20px;
+       
+    }
+    #modalcancel {
+        width:140px;
+        height:100%;
+        margin:0px;
+    }
+    #modaldelete {
+        width:140px;
+        height:100%;
+        margin:0px;
+    
+    }
+    
+    }
